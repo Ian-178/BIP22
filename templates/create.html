@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Создать новую последовательность случайных чисел {% endblock %}</h1>
+
+<div class="form-group">
+    <label for="a">Числа с и m должны быть взамно простыми!</label>
+</div>
+
+<div class="form-group">
+    <label for="a">Числа с и m должны быть взамно простыми!</label>
+</div>
+
+
+<style>
+    input
+    {
+        autocomplete: false;
+        type: text;
+    }
+</style>
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="a">Укажите значение a</label>
+        <input name="Param_a"
+               placeholder="106"
+               pattern="\d+"
+               value="{{ var_a }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="c">Укажите значение c</label>
+        <input name="Param_c"
+               placeholder="1283"
+               pattern="\d+"
+               value="{{ var_c }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="m">Укажите значение m</label>
+        <input name="Param_m"
+               placeholder="6075"
+               pattern="\d+"
+               value="{{ var_m }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="num">Сколько чисел сгенерировать?</label>
+        <input name="Param_num"
+               placeholder="10"
+               pattern="\d+"
+               value="{{ var_num }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" name = "ButtonEnter" class="btn btn-primary" value="Enter">Ввести</button>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" name = "ButtonEnter" class="btn btn-primary"value="Generate">Сгенерировать параметры</button>
+    </div>
+
+
+</form>
+
+<h2>{{ otv }}</h2>
+{% endblock %}

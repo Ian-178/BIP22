@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Период {% endblock %}</h1>
+
+<h2>Здесь вы можете проверить период ЛКГ для заданных параметров</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="a">Укажите значение a</label>
+        <input type="text" name="a"
+               placeholder="106" 
+               value="{{ request.form['a'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="c">Укажите значение c</label>
+        <input type="text" name="c"
+               placeholder="1283"
+               value="{{ request.form['c'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="m">Укажите значение m</label>
+        <input type="text" name="m"
+               placeholder="6075"
+               value="{{ request.form['m'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ввести</button>
+    </div>
+</form>
+
+<h2>{{ otv }}</h2>
+{% endblock %}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.regButton {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .regButton {
+       width: 100%;
+    }
+}
+</style>
+</head>
+
+
+
+<body>
+
+<!--
+<h2><script type="text/javascript">
+    var mailConf = 'fsdf';
+    document.writeln("Подтверждение почты " + mailConf);
+  </script></h2>
+-->
+<h2>Подтверждение почты {{ mailCur }}</h2>
+
+<form method="post">
+  <div class="container">
+    <label for="mailConfCode"><b>Введите код из письма, пришедшего на ваш почтовый ящик (если сообщение не пришло, введите 0):</b></label>
+    <input type="text" placeholder="Введите код" name="mailConfCode" pattern="\d+" required>
+
+   <!-- <input type="text" name="mailCur" value="{{ mailConf }}"> -->
+
+    <button type="submit">Ввести</button>
+  </div>
+
+<h2>{{ otv }}</h2>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="../../"><button type="button" class="regButton">Вернуться к странице входа</button></a>
+  </div>
+</form>
+
+
+<!-- <h2>Подтверждение почты <label value="{{var_mailCode}}">{{mailConf}}</label></h2> -->
+<!--<input type="email" placeholder="Код" value="{{var_mailCode}}" name="mailConfCode" required>
+<label for="oldpsw">Пожалуйста, введите код, пришедший Вам на почту.</label>
+
+
+<h2>{{ otv }}</h2>
+-->
+<!-- <form method="post">
+  <div class="container">
+    <label for="oldpsw"><b>Старый пароль</b></label>
+    <input type="password" placeholder="Введите ваш старый пароль" name="oldpsw" required>
+    
+    <label for="newpsw"><b>Новый пароль</b></label>
+    <input type="password" placeholder="Введите ваш новый пароль" name="newpsw" required>
+        
+    <button type="submit">Изменить</button>
+  </div>
+  <h2>     {{ otv }}</h2>
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="/changeinfo"><button type="button" class="regButton">Вернуться к странице изменения информации об аккаунте</button></a>
+  </div>
+
+</form> -->
+
+</body>
+</html>

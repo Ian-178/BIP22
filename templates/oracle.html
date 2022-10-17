@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Оракул {% endblock %}</h1>
+<h1> Интересная программка, которая способна найти следующее число в последовательности ЛКГ по четырём предыдущим.</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="first">Введите первое число</label>
+        <input type="text" name="first"
+               class="form-control"
+               value="{{ request.form['first'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="second">Введите второе число</label>
+        <input type="text" name="second"
+               class="form-control"
+               value="{{ request.form['second'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="third">Введите третье число</label>
+        <input type="text" name="third"
+               class="form-control"
+               value="{{ request.form['third'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="forth">Введите четвёртое число</label>
+        <input type="text" name="forth"
+               class="form-control"
+               value="{{ request.form['forth'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ввести</button>
+    </div>
+</form>
+
+<h2>Полученное пятое число:</h2>
+<h2>{{ x5 }}</h2>
+{% endblock %}
